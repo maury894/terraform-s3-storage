@@ -14,7 +14,7 @@ provider "aws" {
   region  = "us-east-2"
 }
 
-resource "aws_s3_bucket" "s3-g-actions-bucket" {
+resource "aws_s3_bucket" "s3-g-actions-bucket-3" {
   bucket = "s3-g-actions-bucket"
   acl    = "private"
 
