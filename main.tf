@@ -14,12 +14,12 @@ provider "aws" {
   region  = "us-east-2"
 }
 
-resource "aws_s3_bucket" "MyFirtsS3" {
-  bucket = "my-tf-test-bucket"
+resource "aws_s3_bucket" "s3-g-actions-bucket" {
+  bucket = "s3-g-actions-bucket"
   acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "Terraform-Bucket"
     Environment = "Dev"
   }
 }
