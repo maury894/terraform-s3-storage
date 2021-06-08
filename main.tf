@@ -14,11 +14,12 @@ provider "aws" {
   region  = "us-east-2"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-08962a4068733a2b6"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "MyFirtsS3" {
+  bucket = "my-tf-test-bucket"
+  acl    = "private"
 
   tags = {
-    Name = "TestGitHubActionsInstance"
+    Name        = "My bucket"
+    Environment = "Dev"
   }
 }
