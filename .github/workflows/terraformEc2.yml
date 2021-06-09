@@ -6,8 +6,11 @@ jobs:
   terraform_apply:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
+   
+    - name: Install Terraform
     - uses: hashicorp/setup-terraform@v1
-
+    
     - name: Verify Terraform version
       run: terraform --version
 
